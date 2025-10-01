@@ -3,73 +3,133 @@
 Saya Shakila Aulia dengan NIM 2403086 mengerjakan Tugas Praktikum 2 dalam mata kuliah Desain dan Pemograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
 ---
-## DESAIN DAN KODE FLOW
+## DESAIN DIAGRAM, ATRIBUT DAN METHODS
 **Desain**
 
 ![Tampilan Diagram](TP3-UML.png)
 
-Untuk desain sendiri menggunakan tiga class yaitu IdentitasProduk, KategoriProduk, dan Spesifikasi Produk, yang memiliki atribut dan method:
-1. IdentitasProduk
-Dibuat untuk menampilkan identitas dasar dari sebuah produk yaitu:
+Untuk desain sendiri menggunakan 8 class yaitu IdentitasProduk, KategoriProduk, dan Spesifikasi Produk, yang memiliki atribut dan method:
+1. User
+User merupakan parent dari Pembeli dan Penjual. Hubungan ketiganya merupakan Hierarchical Inheritance. Dibuat untuk menampilkan identitas dasar berupa akun dari Pembeli dan Penjual yaitu:
 Atribut
-- idProduk
-- namaProduk
-- stok
+- idUser
+- nama
+- email
+- password
+- no_hp
+
+Method
+- TampilkanInfo() -> untuk menampilkan info User
+
+
+2. Pembeli
+Merupakan child dari User, sehingga atribut User diturunkan dalam class ini. Dibuat untuk menampilkan detail terkait Pembeli yaitu:
+Atribut
+- id_pembeli
+- alamat_pengiriman
+- keranjang_produk
+
+Method 
+- TampilkanInfo() -> untuk menampilkan info Pembeli
+- TambahKeranjang() -> menambahkan list produk yang dibeli oleh pembeli
+
+3. Penjual
+Merupakan child dari User, sehingga atribut User diturunkan dalam class ini. Dibuat untuk menampilkan detail terkait Penjual yaitu:
+Atribut
+- id_penjual
+- nama_toko
+- alamat_toko
+- daftar_produk
+
+Method
+- TampilkanInfo() -> untuk menampilkan info Penjual
+- TambahProduk() -> menambahkan list produk yang dijual oleh pembeli
+
+4. Produk
+Produk berelasi dengan pembeli dan penjual berupa hubungan composite, karena disini pembeli dan penjual sama-sama memiliki (HAS A) produk. Dibuat untuk menampilkan info dari produk yang ada yaitu:
+Atribut
+- id_produk
+- nama_produk
 - harga
-- gambar (khusus versi web PHP)
+- stok
 
 Method
-- tampilkan_info() -> untuk menampilkan info identitas produknya
+- TampilkanInfo() -> untuk menampilkan info produknya
 
-
-2. SpesifikasiProduk
-Dibuat untuk menampilkan termasuk jenis kategori apa produk tersebut berdasarkan atribut yaitu:
+5. KategoriProduk
+lass ini merupakan child dari Produk sehingga berelasi single inheritance, sehingga atribut produk diturunkan ke class ini. Dibuat untuk menampilkan info lebih detail yaitu kategorri dari produk yang ada yaitu:
 Atribut
-- jenisProduk
-- merk
-- asalNegara
+- id_kategori
+- nama_kategori
+  
+Method
+- TampilkanInfo() -> untuk menampilkan info kategori produknya
+
+5. KategoriProduk
+Class ini merupakan child dari Produk sehingga berelasi single inheritance, sehingga atribut produk diturunkan ke class ini. Dibuat untuk menampilkan info lebih detail yaitu kategorri dari produk yang ada yaitu:
+Atribut
+- id_kategori
+- nama_kategori
+  
+Method
+- TampilkanInfo() -> untuk menampilkan info kategori produknya
+
+6. DetailElektronik
+Detail elektronik ini merupakan child dari kategori dimana tadi disebutkan kategori merupakan child juga dari produk, sehingga relasinya merupakan multiple inheritance. Sehingga atribut detail elektronik mendapat turunan dari kategori dan produk. Dibuat untuk menampilkan info lebih detail dari masing-masing kategorri dari produk yang ada khususnya barang elektronik yaitu:
+Atribut
+- id_elektronik
 - garansi
-
-+atribut dari IdentitasProduk diturunkan dalam class ini berdasarkan konsep inheritance, sehigga tak perlu menulis ulang atribut
-
+- daya
+- spesifikasi
+  
 Method
-- tampilkan_kategori() -> untuk menampilkan info kategori produknya
+- TampilkanInfo() -> untuk menampilkan info detail elektronik
 
-
-3. KategoriProduk
-Dibuat untuk menampilkan infolebih detail yaitu spesifikasi dari produk yang ada yaitu:
+7. DetailFashion
+Detail fashion ini merupakan child dari kategori dimana tadi disebutkan kategori merupakan child juga dari produk, sehingga relasinya merupakan multiple inheritance. Sehingga atribut detail fashion mendapat turunan dari kategori dan produk. Dibuat untuk menampilkan info lebih detail dari masing-masing kategorri dari produk yang ada khususnya barang elektronik yaitu:
 Atribut
+- id_fashion
 - ukuran
 - warna
-- daya
-- fitur
-
-+atribut dari IdentitasProduk dan KategoriProduk diturunkan dalam class ini berdasarkan konsep inheritance,sehigga tak perlu menulis ulang atribut
-
+- bahan
+  
 Method
-- tampilkan_spesifikasi() -> untuk menampilkan info spesifikasi produknya
+- TampilkanInfo() -> untuk menampilkan info detail fashion
+
+8. DetailBuku
+Detail buku ini merupakan child dari kategori dimana tadi disebutkan kategori merupakan child juga dari produk, sehingga relasinya merupakan multiple inheritance. Sehingga atribut detail buku mendapat turunan dari kategori dan produk. Dibuat untuk menampilkan info lebih detail dari masing-masing kategorri dari produk yang ada khususnya barang buku yaitu:
+Atribut
+- id_buku
+- pemulis
+- penerbit
+- jumlah_halaman
+  
+Method
+- TampilkanInfo() -> untuk menampilkan info detail fashion
+
+**Desain Program**
+Program ini didesain untuk merepresentasikan interaksi antara pengguna (Penjual dan Pembeli) dengan produk (Elektronik, Fashion, Buku). Untuk detail relasi dijelaskan di dokum sebelumnya.
 
 **Kode Flow**
 Penjelasan Kode Flow dari tiap bahasa:
 1. C++, Java, PYTHON
      - Program mulai dari Main.cpp untuk membuat data secara hardcode dengan memasukkannya ke dalam list object
-     - Menampilkan tabel berisi data yang sudah dimasukkan sebelumnya
-     - Menambahkan data dengan meminta user untuk input
-     - Ketika memasukkan ID maka akan dicek terlebih dahulu, jika id belum ada maka akan ditambahkan, jika tidak maka akan gagal memasukkan
-     - Menampilkan kembali tabel dengan data yang sudah bertambah
+     - Menampilkan data yang sudah dimasukkan sebelumnya
+     - Menambahkan data baru dengan membuat data secara hardcode dengan memasukkannya ke dalam list object
+     - Menampilkan kembali dengan data yang sudah bertambah
 
-2. PHP
-     - Program mulai dari Index.php dengan membuat tabel
-     - Membuat list object lalu memasukkan datanya mengunakan set
-     - Menampilkan data dalam tabel dengan get
 ---
 ## DOKUMENTASI
+**Tampilan Output CLI (CPP)**
+
+![Tampilan Output CLI (CPP)](Dokum-CLI.png)
+
 **Tampilan Output CLI (CPP,JAVA,PYTHON)**
 
 ![Tampilan Output CLI (CPP,JAVA,PYTHON)](Dokum-CLI.png)
 
-**Tampilan WEBSITE (PHP)**
+**Tampilan Output CLI (CPP,JAVA,PYTHON)**
 
-![Tampilan Output WEBSITE (PHP)](Dokum-Web.png)
+![Tampilan Output CLI (CPP,JAVA,PYTHON)](Dokum-CLI.png)
 
 *Dokumentasi lebih lanjut berupa screen record ada dalam folder dokumentasi
