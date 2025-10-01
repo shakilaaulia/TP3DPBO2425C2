@@ -6,7 +6,7 @@ Saya Shakila Aulia dengan NIM 2403086 mengerjakan Tugas Praktikum 2 dalam mata k
 ## DESAIN DAN KODE FLOW
 **Desain**
 
-![Tampilan Diagram](TP3-Desain.png)
+![Tampilan Diagram](TP3-UML.png)
 
 Untuk desain sendiri menggunakan tiga class yaitu IdentitasProduk, KategoriProduk, dan Spesifikasi Produk, yang memiliki atribut dan method:
 1. IdentitasProduk
