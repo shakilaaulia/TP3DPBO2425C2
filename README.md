@@ -133,6 +133,6 @@ Penjelasan Kode Flow dari tiap bahasa:
 **Tampilan Output CLI (JAVA)**
 
 ![Tampilan Output CLI (JAVA)](JAVA/Dokumentasi/JAVASebelum.png)
-![Tampilan Output CLI (JAVA)](JAVA/Dokumentasi/JAVAesudah.png)
+![Tampilan Output CLI (JAVA)](JAVA/Dokumentasi/JAVASesudah.png)
 
 *Dokumentasi lebih lanjut berupa screen record ada dalam folder dokumentasi
