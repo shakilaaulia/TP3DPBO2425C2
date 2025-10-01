@@ -1,6 +1,6 @@
 # TP3DPBO2425C2
 ## JANJI
-Saya Shakila Aulia dengan NIM 2403086 mengerjakan Tugas Praktikum 2 dalam mata kuliah Desain dan Pemograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
+Saya Shakila Aulia dengan NIM 2403086 mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain dan Pemograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
 ---
 ## DESAIN DIAGRAM, ATRIBUT DAN METHODS
@@ -122,14 +122,17 @@ Penjelasan Kode Flow dari tiap bahasa:
 ## DOKUMENTASI
 **Tampilan Output CLI (CPP)**
 
-![Tampilan Output CLI (CPP)](Dokum-CLI.png)
+![Tampilan Output CLI (CPP)](CPP/Dokumentasi/CPPSebelum.png)
+![Tampilan Output CLI (CPP)](CPP/Dokumentasi/CPPSesudah.png)
 
-**Tampilan Output CLI (CPP,JAVA,PYTHON)**
+**Tampilan Output CLI (PYTHON)**
 
-![Tampilan Output CLI (CPP,JAVA,PYTHON)](Dokum-CLI.png)
+![Tampilan Output CLI (PYTHON)](PYTHON/Dokumentasi/PYTHONSebelum.png)
+![Tampilan Output CLI (PYTHON)](PYTHON/Dokumentasi/PYTHONSesudah.png)
 
-**Tampilan Output CLI (CPP,JAVA,PYTHON)**
+**Tampilan Output CLI (JAVA)**
 
-![Tampilan Output CLI (CPP,JAVA,PYTHON)](Dokum-CLI.png)
+![Tampilan Output CLI (JAVA)](JAVA/Dokumentasi/JAVASebelum.png)
+![Tampilan Output CLI (JAVA)](JAVA/Dokumentasi/JAVAesudah.png)
 
 *Dokumentasi lebih lanjut berupa screen record ada dalam folder dokumentasi
